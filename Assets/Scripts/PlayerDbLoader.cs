@@ -36,7 +36,7 @@ public class PlayerDbLoader : MonoBehaviour
         GenerateNewPlayerDb();
         
         var filePath = Path.Combine(Application.dataPath, RelativePath);
-        File.WriteAllText(filePath, JsonUtility.ToJson(playerDb));
+        File.WriteAllText(filePath, JsonUtility.ToJson(playerDb, true));
         print("Saved to " + filePath);
     }
 
